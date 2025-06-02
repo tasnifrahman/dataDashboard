@@ -1,0 +1,120 @@
+[
+  {
+    "clientId": "Fusion_core",
+    "timestamp": 1748845038370,
+    "eventType": "connected",
+    "sessionIdentifier": "e8dda6b5-dfd1-4355-affd-2c3084029c0e",
+    "principalIdentifier": "eefd44420b1acb4621485c51c3ada21b84e7a8517c8fda3b963e5998c6dd3e5e",
+    "ipAddress": "206.83.122.239",
+    "versionNumber": 184
+  },
+  {
+    "clientId": "Fusion_core",
+    "timestamp": 1748845038370,
+    "eventType": "connected",
+    "sessionIdentifier": "e8dda6b5-dfd1-4355-affd-2c3084029c0e",
+    "principalIdentifier": "eefd44420b1acb4621485c51c3ada21b84e7a8517c8fda3b963e5998c6dd3e5e",
+    "ipAddress": "206.83.122.239",
+    "versionNumber": 184
+  },
+  {
+    "clientId": "Fusion_core",
+    "timestamp": 1748845038370,
+    "eventType": "connected",
+    "sessionIdentifier": "e8dda6b5-dfd1-4355-affd-2c3084029c0e",
+    "principalIdentifier": "eefd44420b1acb4621485c51c3ada21b84e7a8517c8fda3b963e5998c6dd3e5e",
+    "ipAddress": "206.83.122.239",
+    "versionNumber": 184
+  },
+  {
+    "clientId": "Fusion_core",
+    "timestamp": 1748845038370,
+    "eventType": "connected",
+    "sessionIdentifier": "e8dda6b5-dfd1-4355-affd-2c3084029c0e",
+    "principalIdentifier": "eefd44420b1acb4621485c51c3ada21b84e7a8517c8fda3b963e5998c6dd3e5e",
+    "ipAddress": "206.83.122.239",
+    "versionNumber": 184
+  }
+]
+
+
+{
+  "Fusion-Core-Data": {
+    "runTime": "3511",
+    "inputVolatage": "24.124",
+    "inputCurrent": "2.445",
+    "internalVolatage": "10.043",
+    "temperature": "36.406"
+  },
+  "SL-Booster-Data": {
+    "inputVolatage": "24.192",
+    "inputCurrent": "1.900",
+    "outputVoltage": "57.482",
+    "outputCurrent": "0.720",
+    "inputPower": "45.972",
+    "outputPower": "41.375",
+    "temperatureBooster1": "52.217",
+    "temperatureBooster2": "52.731"
+  },
+  "SL-Booster-Status": {
+    "outputEnable": "ENABLED",
+    "boosterEnabled": "ENABLED",
+    "inputOverloaded": "NO",
+    "outputOverloaded": "NO",
+    "booster1Health": "OK",
+    "booster2Health": "OK",
+    "boosterFlag": "BOTH_ENABLED",
+    "temperatureFlag": "BALANCED",
+    "fusionCoreConnected": "YES",
+    "internalRegulator": "DISABLED",
+    "inputCurrentSensor": "WORKING",
+    "outputCurrentSensor": "STAND_BY"
+  },
+  "Aux-Booster-Data": {
+    "inputVolatage": "24.068",
+    "inputCurrent": "0.108",
+    "outputVoltage": "49.503",
+    "outputCurrent": "0.047",
+    "inputPower": "2.597",
+    "outputPower": "2.338",
+    "temperatureBooster": "48.791"
+  },
+  "Aux-Booster-Status": {
+    "boosterEnabled": "ENABLED",
+    "inputOverloaded": "NO",
+    "outputOverloaded": "NO",
+    "pGoodFlag": "OK",
+    "mosfetDriverFlag": "OK",
+    "boosterHealth": "OK",
+    "controllerFlag": "ENABLED",
+    "temperatureFlag": "NORMAL",
+    "fusionCoreConnected": "YES",
+    "internalRegulator": "DISABLED",
+    "inputCurrentSensor": "WORKING",
+    "outputCurrentSensor": "STAND_BY"
+  },
+  "Injector-Data": {
+    "routerVolatage": "49.524",
+    "routerCurrent": "-0.008",
+    "routerCurrent45": "-0.089",
+    "routerCurrent78": "0.073",
+    "dishyVoltage": "57.295",
+    "dishyCurrent": "0.764",
+    "dishyCurrent12": "0.466",
+    "dishyCurrent36": "0.009",
+    "dishyCurrent45": "0.677",
+    "dishyCurrent78": "0.375",
+    "routerPower": "-0.391",
+    "dishyPower": "43.746"
+  },
+  "Injector-Status": {
+    "routerVoltageFlag": "OK",
+    "dishyVoltageFlag": "NaN",
+    "routerCurrentFlag": "NORMAL",
+    "routerImbalanceFlag": "Balanced",
+    "dishyCurrentFlag": "NORMAL",
+    "dishy12Imbalance36Flag": "�<�?/",
+    "dishy45Imbalance78Flag": "�<�?/",
+    "fusionCoreConnected": "YES"
+  }
+}
