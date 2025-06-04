@@ -10,8 +10,6 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table"
-import { z } from "zod"
-
 import {
   Table,
   TableBody,
@@ -25,60 +23,23 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Label } from "@/components/ui/label"
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react"
 
-export const sessionSchema = z.object({
-  clientId: z.string(),
-  timestamp: z.number(),
-  eventType: z.string(),
-  sessionIdentifier: z.string(),
-  principalIdentifier: z.string(),
-  ipAddress: z.string(),
-  versionNumber: z.number(),
-})
+export type MetricEntry = {
+  metric: string;
+  value: string;
+};
 
-type Session = z.infer<typeof sessionSchema>
+const columns: ColumnDef<MetricEntry>[] = [
+  {
+    accessorKey: "metric",
+    header: "Metric",
+  },
+  {
+    accessorKey: "value",
+    header: "Value",
+  },
+];
 
-const columns: ColumnDef<Session>[] = [
-  {
-    accessorKey: "clientId",
-    header: "Client ID",
-  },
-  {
-    accessorKey: "ipAddress",
-    header: "IP Address",
-  },
-  {
-    accessorKey: "timestamp",
-    header: "Timestamp",
-    cell: ({ row }) => {
-      const date = new Date(row.original.timestamp)
-      return date.toLocaleString()
-    },
-  },
-  {
-    accessorKey: "eventType",
-    header: "Event Type",
-  },
-  {
-    accessorKey: "sessionIdentifier",
-    header: "Session ID",
-    cell: ({ row }) => (
-      <div className="break-words whitespace-normal">{row.original.sessionIdentifier}</div>
-    ),
-  },
-  {
-    accessorKey: "principalIdentifier",
-    header: "Principal ID",
-    cell: ({ row }) => (
-      <div className="break-words whitespace-normal">{row.original.principalIdentifier}</div>
-    ),
-  },
-  {
-    accessorKey: "versionNumber",
-    header: "Version",
-  },
-]
-
-export function DataTable({ data }: { data: Session[] }) {
+export function DataTable({ data }: { data: MetricEntry[] }) {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [pagination, setPagination] = React.useState({
     pageIndex: 0,
