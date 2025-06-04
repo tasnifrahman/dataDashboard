@@ -28,16 +28,38 @@ export type MetricEntry = {
   value: string;
 };
 
+// const columns: ColumnDef<MetricEntry>[] = [
+//   {
+//     accessorKey: "metric",
+//     header: "Metric",
+//      size: 70,
+//   },
+//   {
+//     accessorKey: "value",
+//     header: "Value",
+//      size: 30,
+//   },
+// ];
+
 const columns: ColumnDef<MetricEntry>[] = [
   {
     accessorKey: "metric",
     header: "Metric",
+    cell: ({ row }) => <span className="block w-64">{row.original.metric}</span>,
+    meta: {
+      className: "w-64", // You can use this if integrating with styling logic
+    },
   },
   {
     accessorKey: "value",
     header: "Value",
+    cell: ({ row }) => <span className="block w-40">{row.original.value}</span>,
+    meta: {
+      className: "w-40",
+    },
   },
-];
+]
+
 
 export function DataTable({ data }: { data: MetricEntry[] }) {
   const [sorting, setSorting] = React.useState<SortingState>([])
